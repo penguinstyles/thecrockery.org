@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<%= partial "head" %>
+	<body class="content-template-default single single-content single-format-standard wikilogy-theme wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
+		<div class="wikilogy-wrapper boxed-false" id="general-wrapper">
+			<div class="site-content">
+				<%= partial "header" %>
+				<%= partial "mobile-header" %>
+				<div class="site-sub-content">
+					<div class="title-banner style-1" style="padding: 5.54rem 0;">
+						<div class="page-title-background"></div>
+						<div class="content">
+							<div class="wikilogy-title style-1">
+								<div class="title-text">
+									<div class="title"><%= current_page.data.title %></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fullwidthsidebar">
+								<div class="single-content">
+									<article id="post-309" class="content type-content status-publish format-standard has-post-thumbnail hentry">
+										<div class="post-wrapper">
+											<div class="post-content">
+												<div class="post-content-inner">
+													<div class="vc_row wpb_row vc_row-fluid vc_row-o-content-top vc_row-flex">
+														<%= partial('infoboxes/character', :locals => { :display => "mobile" }) %>
+														<div id="page-content" class="wpb_column vc_column_container vc_col-sm-8">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element">
+																		<div class="wpb_wrapper">
+																			<%= yield %>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<%= partial('infoboxes/character', :locals => { :display => "desktop" }) %>
+													</div>
+													<%= partial "references" %>
+												</div>
+											</div>
+											<div class="post-content-footer">
+												<div class="content-categories">
+													<div class="title">Categories:</div>
+													<div class="list">
+													  <% if current_page.data.isCharacter == true %>
+													    <a href="/category/characters/">Characters</a>
+													  <% end %>
+													  <% if current_page.data.isLocation == true %>
+													    <a href="/category/locations/">Locations</a>
+													  <% end %>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<%= partial "footer" %>
+			</div>
+		</div>
+		<%= javascript_include_tag "jquery" %>
+		<%= javascript_include_tag "visualcomposer" %>
+	</body>
+</html>

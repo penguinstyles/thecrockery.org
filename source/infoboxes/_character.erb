@@ -1,0 +1,45 @@
+<% if current_page.data.isCharacter === true %>
+<div id="infobox" class="<% if display === "mobile" %>mobile-infobox <% end %><% if display === "desktop" %>desktop-infobox <% end %>fixed-column wpb_column vc_column_container vc_col-sm-4">
+	<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			<div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1507664104907">
+				<div class="wpb_column vc_column_container vc_col-sm-12">
+					<div class="vc_column-inner">
+						<div class="wpb_wrapper">
+							<div class="content-table">
+								<div class="item style2 image cover-item extra-top-margin">
+									<div class="content image"><%= image_tag current_page.data.image %></div>
+								</div>
+								<div class="item style1 simple-text">
+									<div class="title">Full name:</div>
+									<div class="content simple-text">
+										<p><%= current_page.data.fullName || "Unknown" %></p>
+									</div>
+								</div>
+								<div class="item style1 simple-text">
+									<div class="title">Ethnicity:</div>
+									<div class="content simple-text">
+										<p><%= current_page.data.ethnicity || "Unknown" %></p>
+									</div>
+								</div>
+								<div class="item style1 simple-text">
+									<div class="title">Gender:</div>
+									<div class="content simple-text">
+										<p><%= current_page.data.gender || "Unknown" %></p>
+									</div>
+								</div>
+								<div class="item style1 simple-text">
+									<div class="title">Hair color:</div>
+									<div class="content simple-text">
+										<p><%= current_page.data.hairColor || "Unknown" %></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>

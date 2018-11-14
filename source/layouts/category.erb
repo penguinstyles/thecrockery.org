@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<%= partial "head" %>
+	<body class="content-template-default single single-content single-format-standard wikilogy-theme wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
+		<div class="wikilogy-wrapper boxed-false" id="general-wrapper">
+			<div class="site-content">
+				<%= partial "header" %>
+				<%= partial "mobile-header" %>
+				<div class="site-sub-content">
+					<div class="container">
+						<%= yield %>
+					</div>
+				</div>
+				<%= partial "footer" %>
+			</div>
+		</div>
+		<%= javascript_include_tag "jquery" %>
+		<%= javascript_include_tag "visualcomposer" %>
+	</body>
+</html>

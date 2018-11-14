@@ -1,0 +1,11 @@
+.ping, .channel, .role {
+    color: #7289da;
+    background-color: #f1f3fb;
+    border: 1px #7289da solid;
+    border-radius: 2px;
+    font-family: Helvetica,Arial,sans-serif;
+    padding: 2px 4px;
+}
+ .ping a, .channel a, .role a {
+    color: #7289da;
+}
