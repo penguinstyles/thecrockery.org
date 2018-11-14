@@ -53,3 +53,8 @@ activate :directory_indexes
 page "/category/*", :layout => "category" # Category pages
 page "/about.html", :layout => "misc" # About page
 page "/index.html", :layout => "mainpage" # Main Page
+
+activate :gh_pages do |gh_pages|
+  gh_pages.remote = 'https://github.com/TheCrockery/thecrockery.org.git'
+  gh_pages.branch = 'build'
+end
