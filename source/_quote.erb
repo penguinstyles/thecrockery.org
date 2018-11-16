@@ -2,7 +2,9 @@
 	<div class="wpb_wrapper">
 		<blockquote>
 			<p><%= quote %></p>
+			<% if quotee != "" %>
 			<p><strong>– <%= quotee %></strong> </p>
+			<% end %>
 		</blockquote>
 	</div>
 </div>
