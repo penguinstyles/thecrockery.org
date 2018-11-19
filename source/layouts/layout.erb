@@ -21,14 +21,14 @@
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fullwidthsidebar">
 								<div class="single-content">
-									<article id="post-309" class="content type-content status-publish format-standard has-post-thumbnail hentry">
+									<article class="content type-content status-publish format-standard has-post-thumbnail hentry">
 										<div class="post-wrapper">
 											<div class="post-content">
 												<div class="post-content-inner">
 													<div class="vc_row wpb_row vc_row-fluid vc_row-o-content-top vc_row-flex">
 														<%= partial('infoboxes/character', :locals => { :display => "mobile" }) %>
 														<%= partial('infoboxes/location', :locals => { :display => "mobile" }) %>
-														<div id="page-content" class="wpb_column vc_column_container vc_col-sm-8">
+														<div id="page-content" class="wpb_column vc_column_container <% if current_page.data.useFullWidth != true %>vc_col-sm-8<% end %>">
 															<div class="vc_column-inner">
 																<div class="wpb_wrapper">
 																	<div class="wpb_text_column wpb_content_element">
@@ -54,6 +54,9 @@
 													  <% end %>
 													  <% if current_page.data.isLocation == true %>
 													    <a href="/category/locations/">Locations</a>
+													  <% end %>
+													  <% if current_page.data.isTerm == true %>
+													    <a href="/category/terms/">Terms</a>
 													  <% end %>
 													  <% if current_page.data.isMajorCharacter == true %>
 													  	<a href="/category/characters/major-characters/">Major Characters</a>
